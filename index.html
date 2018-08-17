@@ -4,10 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" crossorigin="anonymous" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
+    <link rel="stylesheet" crossorigin="anonymous" integrity="sha256-RYMme8QITYCPWDLzOXswkTsPu1tjeAE2Myb7Kid/JBY=" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Inconsolata:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <title>Hello!</title>
 </head>
-<body>
+<body>    
+        <div class="hero-full-screen">
+
+                <div class="top-content-section">
+                  <div class="top-bar">
+                    <div class="top-bar-left">
+                      <ul class="menu">
+                        <li class="menu-text"><img src="http://placehold.it/75x30" alt="logo"></li>
+                        <li><button type="button" class="hollow button secondary" id="aboutMe">About Me</button></li>
+                        <li><button type="button" class="hollow button secondary" id="portfolio">Portfolio</button></li>
+                        <li><button type="button" class="hollow button secondary" id="contactMe">Contact</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div id="heading">
+                    <div class="middle-content-section">
+                        <h1>Valerie Flores</h1>
+                        <h2>Professional Portfolio and Resume</h2>
+                    </div>
+                </div>
+
+                <div class="middle-content-section">
+                    <div class="grid-container">
+                        <div class="grid-x">
+                            <div class="cell small-4"></div>
+                            <div class="cell auto">
+                                <div id="bioPage">
+                                    <h1>About Me</h1>
+                                    <p>
+                                        I received my Bachelor of Fine Arts degree from Wichita State University in Wichita, KS with an emphasis in flute performance.  However, my career has primarily been in commercial retail real estate.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        For 18 years, I have worked in the field of property management for commercial retail properties – shopping centers.  I worked my way from Guest Services Representative up to General Manager in charge of multi-million dollar properties.  While this industry has offered its share of challenges and rewards, my real interest has always been in programming.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        I wrote my first computer script when I was 16.  While it wasn’t intricate, I found it to be fun and was so excited when that script became a functioning program – a game of “Hangman” to help young children learn to spell.  It wasn’t fancy, but I was amazed that I could create something that others could use.  Unfortunately, at the time I didn’t realize that this could be a real career and didn’t pursue it further.  Until Now.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        I am currently working through UCI’s Coding Bootcamp to develop these skills that I found entertaining as a teenager into actual career skills and transition my career in to a field that I feel passionate about.
+                                    </p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Name:
+                                <input type="text" placeholder="Enter Your Name Here" />
+                            </label>
+                        </div>
+                    </div>            
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Email:
+                                <input type="text" placeholder="Enter Your Email Here" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Message:
+                                <textarea placeholder="Enter Message Here"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <a href="#" class="button success">Submit</a>    
+                </form>   
+            
+            <div class="projects-container">
+                    <a href="https://valeriemiller5.github.io/Unit-4-Game/" class="box box-2">
+                        <img src="assets/images/photo_2.jpg" width="250" height="200" alt="photo_2">
+                        <div class="center-bottom">Crystal Collector</div>
+                    </a>
+                    <a href="https://valeriemiller5.github.io/TriviaGame/" class="box box-3">
+                        <img src="assets/images/photo_3.jpg" width="250" height="200" alt="photo_3">
+                        <div class="center-bottom">Trivia Game</div>
+                    </a>
+                    <a href="https://valeriemiller5.github.io/GifTastic/" class="box box-4">
+                        <img src="assets/images/photo_4.png" width="250" height="200" alt="photo_4">
+                        <div class="center-bottom">GifTastic</div>
+                    </a>
+                    <a href="https://chadtao206.github.io/Group-Project-1/" class="box box-5">
+                        <img src="assets/images/photo_5.jpg" width="250" height="200" alt="photo_5">
+                        <div class="center-bottom">HYelp</div>
+                    </a>
+            </div>
+
+            <div class="bottom-content-section"></div>  
+        </div>
+                               
+              
+    
     
 </body>
 </html>
