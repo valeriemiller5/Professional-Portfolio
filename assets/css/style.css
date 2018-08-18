@@ -22,14 +22,15 @@
     color: #fefefe;
   }
 
-  h1, h2, p {
+  h1, h2 {
     font-family: 'Inconsolata', monospace;
   }
 
-  label {
+  label, p {
     font-family: 'Inconsolata', monospace;
     color: #fefefe;
-    font-size: 1.6rem;
+    font-size: 1rem;
+    text-align: left;
   }
   
   .hero-full-screen .top-content-section {
@@ -80,12 +81,85 @@
 
   @media screen and (min-width: 980px) {
     #bioPage, #contactForm, .projects-container {
-      margin-left: 10rem;
-      margin-right: 10rem;
+      margin-left: 5rem;
+      margin-right: 5rem;
     }
   }
 
   .projects-container {
     width: auto;
-    float: left;
+   
   }
+
+  .responsive {
+    width: 50%;
+    height: auto;
+}
+
+.projects-container, .box {
+  position: relative;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+  }
+}
+
+#headshot {
+  width: 200px;
+  height: 185px;
+  float: left;
+  padding-right: 10px;
+  margin-left: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], textarea {
+  width: 45rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}

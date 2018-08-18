@@ -19,6 +19,7 @@ $(document).ready(function () {
         $("#bioPage").hide();
         $(".projects-container").hide();
         $("#contactForm").show();
+        document.body.style.backgroundImage = "url('../images/contact-background.jpg')";
     });
 
     $("#portfolio").on("click", function() {
