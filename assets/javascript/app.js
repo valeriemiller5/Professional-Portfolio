@@ -9,9 +9,6 @@ $(document).ready(function () {
         $("#contactForm").hide();
         $(".projects-container").hide();
         $("#bioPage").show();
-        //$( ".hero-full-screen" ).fadeTo( "fast" , 0.5, function() {
-        //    console.log("animation complete");
-        //  });
     });
 
     $("#contactMe").on("click", function() {
