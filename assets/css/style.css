@@ -134,6 +134,11 @@
       flex: 50%;
       max-width: 50%;
   }
+
+  input, textarea {
+    width: 95% !important;
+  }
+
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -196,4 +201,10 @@ label {
   top: 48%;
   left: 50%;
   transform: translate(-50%, -90%);
+}
+
+#aboutMe:hover, #portfolio:hover, #contactMe:hover {
+  color: yellow !important;
+  font-style: italic !important;
+  font-weight: bolder;
 }
