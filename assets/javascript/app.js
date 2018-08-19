@@ -1,4 +1,13 @@
-$(document).ready(function () { 
+$(document).ready(function () {
+    // Firebase Admin to store messages sent via the 'Contact Me' form
+    var admin = require("firebase-admin");
+
+    var serviceAccount = require("path/to/serviceAccountKey.json");
+    
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount),
+      databaseURL: "https://professional-portfolio-2864b.firebaseio.com"
+    });
 
     $("#bioPage").hide();
     $("#contactForm").hide();

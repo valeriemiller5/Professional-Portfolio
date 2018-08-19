@@ -1,0 +1,25 @@
+{
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "description": "professional portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriemiller5/Professional-Portfolio.git"
+  },
+  "keywords": [
+    "professional"
+  ],
+  "author": "Valerie Flores",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valeriemiller5/Professional-Portfolio/issues"
+  },
+  "homepage": "https://github.com/valeriemiller5/Professional-Portfolio#readme",
+  "dependencies": {
+    "firebase-admin": "^6.0.0"
+  }
+}
