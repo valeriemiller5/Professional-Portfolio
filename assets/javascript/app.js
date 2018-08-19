@@ -16,7 +16,6 @@ $(document).ready(function () {
         $("#bioPage").hide();
         $(".projects-container").hide();
         $("#contactForm").show();
-        //document.body.style.backgroundImage = "url('../images/contact-background.jpg')";
     });
 
     $("#portfolio").on("click", function() {
@@ -26,7 +25,7 @@ $(document).ready(function () {
         $(".projects-container").show();
     })
 
-    // Firebase Admin to store messages sent via the 'Contact Me' form
+    // Firebase setup to store messages sent via the 'Contact Me' form
     var config = {
         apiKey: "AIzaSyBIOX3DPPRLci_6Hx28Vuzvytm67Nha3LQ",
         authDomain: "professional-portfolio-2864b.firebaseapp.com",
