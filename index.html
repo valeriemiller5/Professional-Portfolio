@@ -9,6 +9,7 @@
     <link rel="stylesheet" crossorigin="anonymous" integrity="sha256-RYMme8QITYCPWDLzOXswkTsPu1tjeAE2Myb7Kid/JBY=" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Inconsolata:400,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
     <title>Hello!</title>
@@ -70,25 +71,25 @@
                     <div class="row">
                         <div class="large-12 columns">
                             <label>Name:
-                                <input type="text" placeholder="Enter Your Name Here" />
+                                <input id="name" type="text" placeholder="Enter Your Name Here" />
                             </label>
                         </div>
                     </div>            
                     <div class="row">
                         <div class="large-12 columns">
                             <label>Email:
-                                <input type="text" placeholder="Enter Your Email Here" />
+                                <input id="email" type="text" placeholder="Enter Your Email Here" />
                             </label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="large-12 columns">
                             <label>Message:
-                                <textarea placeholder="Enter Message Here"></textarea>
+                                <textarea id="message" placeholder="Enter Message Here"></textarea>
                             </label>
                         </div>
                     </div>
-                    <a href="#" class="button success">Submit</a>    
+                    <a href="#" class="button success" id="submit">Submit</a>    
                 </form>   
             
             <div class="projects-container">
