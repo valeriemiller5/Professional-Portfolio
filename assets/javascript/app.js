@@ -16,7 +16,7 @@ $(document).ready(function () {
         $("#bioPage").hide();
         $(".projects-container").hide();
         $("#contactForm").show();
-        document.body.style.backgroundImage = "url('../images/contact-background.jpg')";
+        //document.body.style.backgroundImage = "url('../images/contact-background.jpg')";
     });
 
     $("#portfolio").on("click", function() {
@@ -37,14 +37,7 @@ $(document).ready(function () {
       };
       firebase.initializeApp(config);
 
-    //var admin = require("firebase-admin");
     var database = firebase.database();
-    //var serviceAccount = require("path/to/serviceAccountKey.json");
-    
-    //admin.initializeApp({
-    //  credential: admin.credential.cert(serviceAccount),
-    //  databaseURL: "https://professional-portfolio-2864b.firebaseio.com"
-    //});
     
     $("#submit").on("click", function(event) {
         event.preventDefault();
@@ -57,9 +50,9 @@ $(document).ready(function () {
           message: message
         };
         
-        database.ref().set(newContact);
+        database.ref().push(newContact);
 
-        database.ref().on("value", function(snapshot) {
+        database.ref().on("child_added", function(snapshot) {
             console.log(snapshot.val());
             console.log(snapshot.val().name);
             console.log(snapshot.val().email);
@@ -67,5 +60,7 @@ $(document).ready(function () {
           }, function(errorObject) {
             console.log("The read failed: " + errorObject.code);
           });
+          
+          $("#contactForm").trigger("reset");
       });
 });
