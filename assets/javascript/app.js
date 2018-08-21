@@ -4,6 +4,10 @@ $(document).ready(function () {
     $("#contactForm").hide();
     $(".projects-container").hide();
 
+    $(".menu-text").on("click", function() {
+        window.location.reload();
+    });
+
     $("#aboutMe").on("click", function(){
         $("#heading").hide();
         $("#contactForm").hide();

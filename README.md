@@ -2,6 +2,8 @@
 
 This is my updated online resume/portfolio. I have updated it with more customization to better reflect myself, as well as highlight my favorite projects I have created or participated in as a group. If you have any questions or would like to contact me, please use the 'Contact' link on my website.
 
+To return to the Home page any time, click the "Valerie Flores" icon in the upper-left corner of the page.
+
 ## Getting Started
 To visit my site, open the link https://valeriemiller5.github.io/Professional-Portfolio/. Navigation buttons have been added to the top left-hand side of the page.
 
