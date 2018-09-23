@@ -203,6 +203,20 @@ label {
   transform: translate(-50%, -90%);
 }
 
+.center-middle {
+  background-color: lightslategray;
+  color: #ffffff;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.6rem;
+  padding: 15px 50px;
+  width: 84%;
+  text-align: center;
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
 #aboutMe:hover, #portfolio:hover, #contactMe:hover {
   color: yellow !important;
   font-style: italic !important;
