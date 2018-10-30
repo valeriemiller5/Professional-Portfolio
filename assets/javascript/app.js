@@ -1,31 +1,35 @@
 $(document).ready(function () {
-
+    // Hides each section when user opens main page
     $("#bioPage").hide();
-    $("#contactForm").hide();
+    $("#contactInfo").hide();
     $(".projects-container").hide();
 
+    // When the personalized logo is clicked the home page reloads (i.e. all sections are hidden)
     $(".menu-text").on("click", function() {
         window.location.reload();
     });
 
+    // Shows Bio page on click, hides the other sections
     $("#aboutMe").on("click", function(){
         $("#heading").hide();
-        $("#contactForm").hide();
+        $("#contactInfo").hide();
         $(".projects-container").hide();
         $("#bioPage").show();
     });
 
+    // Shows Contact Form/Information on click, hides the other sections
     $("#contactMe").on("click", function() {
         $("#heading").hide();
         $("#bioPage").hide();
         $(".projects-container").hide();
-        $("#contactForm").show();
+        $("#contactInfo").show();
     });
 
+    // Shows projects on click, hides the other sections
     $("#portfolio").on("click", function() {
         $("#heading").hide();
         $("#bioPage").hide();
-        $("#contactForm").hide();
+        $("#contactInfo").hide();
         $(".projects-container").show();
     })
 
@@ -42,6 +46,7 @@ $(document).ready(function () {
 
     var database = firebase.database();
     
+    // When contact information is entered into the form, it is submitted to the Firebase database
     $("#submit").on("click", function(event) {
         event.preventDefault();
         var name = $("#name").val().trim();
@@ -64,6 +69,7 @@ $(document).ready(function () {
             console.log("The read failed: " + errorObject.code);
           });
           
-          $("#contactForm").trigger("reset");
+          // Resets the contact form to clear each field
+          $("#contactInfo").trigger("reset");
       });
 });

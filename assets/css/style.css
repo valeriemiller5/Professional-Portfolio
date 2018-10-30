@@ -25,11 +25,11 @@
     color: #fefefe;
   }
 
-  h1, h2 {
+  h1, h2, h3, h4, h5 {
     font-family: 'Inconsolata', monospace;
   }
 
-  label, p {
+  label, p, #emailLink {
     font-family: 'Inconsolata', monospace;
     color: #fefefe;
     font-size: 1.6rem;
@@ -84,7 +84,7 @@
   }
 
   @media screen and (min-width: 980px) {
-    #bioPage, #contactForm, .projects-container {
+    #bioPage, .projects-container {
       margin-left: 5rem;
       margin-right: 5rem;
     }
@@ -92,6 +92,10 @@
 
   .projects-container {
     width: auto;
+  }
+
+  #contactInfo {
+    width: 60rem;
   }
 
   .responsive {
@@ -159,7 +163,7 @@
 }
 
 input[type=text], textarea {
-  width: 45rem;
+  width: 25rem;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -238,4 +242,8 @@ label {
   margin-bottom: 1.5rem;
   margin-left: 7%;
   width: 85%;
+}
+
+#myContact {
+  float: left;
 }
