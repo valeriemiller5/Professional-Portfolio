@@ -1,251 +1,188 @@
-
-/* 'hero' styling from Foundation responsive layout library*/
-.hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: url("../images/background.jpg") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: scroll;
-  }
-  
-  .hero-full-screen .middle-content-section {
-    text-align: center;
-    color: #fefefe;
+  body {
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: darkslategray;
   }
 
-  h1, h2, h3, h4, h5 {
-    font-family: 'Inconsolata', monospace;
+  #image {
+    width: 265px;
+    height: 150px;
+    padding: 20px;
   }
 
-  label, p, #emailLink {
-    font-family: 'Inconsolata', monospace;
-    color: #fefefe;
-    font-size: 1.6rem;
-    text-align: left;
+  .link {
+    padding: 50px;
+    margin-left: 45%;
   }
-  
-  .hero-full-screen .top-content-section {
-    width: 100%;
+
+  .paragraph {
+    padding: 20px;
   }
-  
-  .hero-full-screen .bottom-content-section {
-    padding: 1rem;
-  }
-  
-  .hero-full-screen .bottom-content-section svg {
-    height: 3.75rem;
-    width: 3.75rem;
-    fill: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu-text {
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar .menu li {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+
+  .myPhoto {
+    margin-left: 150px;
+    margin-right: 10px;
+    height: 150px;
     float: left;
   }
+
+  .initials {
+    height: 100px;
+    width: 115px;
+    margin-left: 18px;
+  }
+
+  .container, p, h3 {
+    margin-left: 12%;
+  }
   
-  .hero-full-screen .top-bar .menu button{
-    color: #fefefe;
-    font-weight: bold;
-    margin-top: 1rem;
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10%;
+  
   }
   
-  .hero-full-screen #bioPage, #contactForm, .projects-container {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
+  .bgimg-1 {
+    background-image: url("../images/background1.jpg");
+    height: 400px;
+  }
+  
+  .bgimg-2 {
+    background-image: url("../images/background2.jpg");
+    height: 400px;
+  }
+  
+  .bgimg-3 {
+    background-image: url("../images/background3.jpg");
+    height: 400px;
+  }
+  
+  .bgimg-4 {
+    background-image: url("../images/background4.jpg");
+    height: 400px;
   }
 
-  @media screen and (min-width: 980px) {
-    #bioPage, .projects-container {
-      margin-left: 5rem;
-      margin-right: 5rem;
-    }
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: darkslategray;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+  
+  h3 {
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: darkslategray;
   }
 
-  .projects-container {
-    width: auto;
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 217, 221);
+    overflow-x: hidden;
+    padding-top: 20px;
   }
-
-  #contactInfo {
-    width: 60rem;
-  }
-
-  .responsive {
-    width: 85%;
-    height: 9rem;
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: darkslategray;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.projects-container, .column {
-  position: relative;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 20%; /* IE10 */
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-      -ms-flex: 20%;
-      flex: 20%;
-      max-width: 20%;
+  }
+  
+  .sidenav a:hover {
+    color: white;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
 
-  input, textarea {
-    width: 95% !important;
-  }
-
+div.app, div.app2, div.app3, div.app4, div.app5, div.app6, div.app7, div.app8, div.app9, div.app10, div.app11, div.app12 {
+  position:relative;
 }
 
-#contactHeader, #email, #emailLink, #phone {
-  width: 25rem !important;
-  font-size: 1rem !important;
+div.app a, div.app2 a, div.app3 a, div.app4 a, div.app5 a, div.app6 a, div.app7 a, div.app8 a, div.app9 a, div.app10 a, div.app11 a, div.app12 a {
+  position:absolute;
+  top:20px;
+  left:30px;
+  display:none;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-  }
-}
-
-#headshot {
-  width: 400px;
-  height: 385px;
-  float: left;
-  padding-right: 10px;
-  margin-left: 30px;
-}
-
-input[type=text], textarea {
-  width: 25rem;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-textarea {
-  height: 10rem;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-.center-bottom {
-  background-color: lightslategray;
+div.app:hover a, div.app2:hover a, div.app3:hover a, div.app4:hover a, div.app5:hover a, div.app6:hover a, div.app7:hover a, div.app8:hover a, div.app9:hover a, div.app10:hover a, div.app11:hover a, div.app12:hover a {
+  display:block;
+  background-color: black;
+  opacity: 0.65;
   color: #ffffff;
-  font-family: 'Inconsolata', monospace;
-  font-size: .8rem;
-  padding: 5px 15px;
-  width: 84%;
+  font-size: 12px;
+  text-decoration: none;
+  width: 64%;
+  height: 73%;
   text-align: center;
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 38%;
   transform: translate(-50%, -90%);
 }
 
-.center-top {
-  background-color: lightslategray;
-  color: #ffffff;
-  font-family: 'Inconsolata', monospace;
-  font-size: .8rem;
-  padding: 5px 15px;
-  width: 84%;
-  text-align: center;
-  position: absolute;
-  top: 31%;
-  left: 50%;
-  transform: translate(-50%, -90%);
+#contactInfo {
+  padding: 15px 50px 35px 50px;
 }
 
-.center-middle {
-  background-color: lightslategray;
-  color: #ffffff;
-  font-family: 'Inconsolata', monospace;
-  font-size: .8rem;
-  padding: 5px 15px;
-  width: 84%;
-  text-align: center;
-  position: absolute;
-  top: 61%;
-  left: 50%;
-  transform: translate(-50%, -90%);
+#name, #email {
+  width: 400px;
 }
 
-#aboutMe:hover, #portfolio:hover, #contactMe:hover {
-  color: yellow !important;
-  font-style: italic !important;
-  font-weight: bolder;
-  margin-left: .05rem;
+#message {
+  width: 375px;
+  height: 175px;
 }
 
-.socialMedia {
-  margin-left: 1rem;
+.bottomNav {
+  overflow: hidden;
+  background-color: #333;
+  /* position: fixed; */
+  padding: 15px;
+  bottom: 0;
+  width: 100%;
 }
 
-.codeLink {
-  background-color: lightslategrey;
+#bottomLogo {
+  margin-left: 75%;
   color: white;
-  text-align: center;
-  font-size: .7rem;
-  font-style: italic;
-  padding: 0.5rem;
-  margin-top: 0.8rem;
-  margin-bottom: 1.5rem;
-  margin-left: 7%;
-  width: 85%;
+}
+
+#myHeart {
+  height: 35px;
+  width: 35px;
+  padding: 5px;
 }

@@ -1,224 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <!-- links to Zurb/Foundation CSS library -->
-    <link rel="stylesheet" crossorigin="anonymous" integrity="sha256-NqI559iHqiWe5VxDi9mXE8i83ghn8Ru8BINyiPN7lDg=" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
-    <link rel="stylesheet" crossorigin="anonymous" integrity="sha256-RYMme8QITYCPWDLzOXswkTsPu1tjeAE2Myb7Kid/JBY=" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700|Inconsolata:400,700" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!-- collects information sent to the database throught "Contact" form -->
     <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
-    <title>Hello!</title>
 </head>
-<body>  
-        <!-- Created from mobile-responsive template available on Zurb   -->
-        <div class="hero-full-screen">
-                <!-- Nav bar -->
-                <div class="top-content-section">
-                  <div class="top-bar">
-                    <div class="top-bar-left">
-                      <ul class="menu">
-                        <li class="menu-text"><img src="assets/images/logo.jpg" width="75" height="45" alt="logo"></li>
-                        <li><button type="button" class="hollow button secondary" id="aboutMe">About Me</button></li>
-                        <li><button type="button" class="hollow button secondary" id="portfolio">Portfolio</button></li>
-                        <li><button type="button" class="hollow button secondary" id="contactMe">Contact</button></li>
-                      </ul>
-                    </div>
-                  </div>
+<body>
+    <div class="sidenav">
+        <img src="assets/images/my_initials.png" alt="initials" class="initials">
+        <a href="#about">Bio</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#links">Links</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="bgimg-1">
+        <div class="caption">
+            <span class="border" id="about">BIO</span>
+        </div>
+    </div>
+    <div class="paragraph">
+        <img src="assets/images/circular_headshot.png" alt="headshot" class="myPhoto">
+        <h3>About The Developer</h3>
+        <p>     
+            Valerie is a freelance Full-Stack Developer based in Orange County, California.  She earned her certification from UC Irvine's coding bootcamp in 2018 and is knowledgeable in multiple development skills including HTML, CSS, Javascript, jQuery, React, and MERN stack applications.
+        </p>
+        <p>
+            Prior to becoming a Full-Stack Developer, Valerie has over 11 years experience in the retail real estate business in Administration and Property Management.  She holds a Bachelor's Degree in Fine Arts with an emphasis on flute performance.
+        </p>
+        <p>
+            When Valerie isn't creating fantastic web apps, she enjoys gaming, relaxing with her husband, Dan, and playing with her standard schnauzer, Heidi.
+        </p>
+    </div>
+    <div class="bgimg-2">
+        <div class="caption">
+            <span class="border" id="portfolio">PORTFOLIO</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h3 style="margin-left: 28%">
+                Applications created by Valerie
+            </h3>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="app">
+                    <img src="assets/images/photo_2.png" id="image" alt="photo_1">
+                </div> 
+            </div>
+            <div class="col">
+                <div class="app2">
+                    <img src="assets/images/liri-photo.png" id="image" alt="photo_2">
                 </div>
-                <!-- Main page with links to my LinkedIn and GitHub profiles -->
-                <div id="heading">
-                    <div class="middle-content-section">
-                        <h1>Valerie Flores</h1>
-                        <h2>Professional Portfolio and Resume</h2>
-                        <a href="https://github.com/valeriemiller5" target="_blank" class="box box-5">
-                            <img src="assets/images/github.png" class="socialMedia" width="75" height="75" alt="github">
-                        </a>
-                        <a href="https://www.linkedin.com/in/valeriesflores/" target="_blank" class="box box-5">
-                            <img src="assets/images/linkedin.jpg" class="socialMedia" width="75" height="75" alt="linkedin">
-                        </a>
-                    </div>
+            </div>
+            <div class="col">
+                <div class="app3">
+                    <img src="assets/images/photo_4.jpg" id="image" alt="photo_3">
                 </div>
-                <!-- Personal statement - appears when "About Me" is clicked in the nav bar -->
-                <div class="middle-content-section">
-                    <div class="grid-container">
-                        <div class="grid-x">
-                            <div class="cell small-4"></div>
-                            <div id="bioDiv" class="cell auto">
-                                <div id="bioPage">
-                                    <h1>My Journey</h1>
-                                    <hr>
-                                    <img id="headshot" src="assets/images/Profile_Photo.jpg" alt="profile_photo">
-                                    <p>
-                                        I received my Bachelor of Fine Arts degree from Wichita State University in Wichita, KS with an emphasis in flute performance.  However, my career has primarily been in commercial retail real estate.
-                                    </p>
-                                    <br>
-                                    <p>
-                                        For 18 years, I have worked in the field of property management for commercial retail properties – shopping centers.  I worked my way from Guest Services Representative up to General Manager in charge of multi-million dollar properties.  While this industry has offered its share of challenges and rewards, my real interest has always been in programming.
-                                    </p>
-                                    <br>
-                                    <p>
-                                        I wrote my first computer script when I was 16.  While it wasn’t intricate, I found it to be fun and was so excited when that script became a functioning program – a game of “Hangman” to help young children learn to spell.  It wasn’t fancy, but I was amazed that I could create something that others could use.  Unfortunately, at the time I didn’t realize that this could be a real career and didn’t pursue it further.  Until Now.
-                                    </p>
-                                    <br>
-                                    <p>
-                                        I am currently working through UCI’s Coding Bootcamp to develop these skills that I found entertaining as a teenager into actual career skills and transition my career in to a field that I feel passionate about.
-                                    </p>
-                                </div>
-                              </div>
-                            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="app4">
+                    <img src="assets/images/photo_5.jpg" id="image" alt="photo_4">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app5">
+                    <img src="assets/images/photo_6.jpg" id="image" alt="photo_5">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app6">
+                    <img src="assets/images/photo_8.jpg" id="image" alt="photo_6">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="app7">
+                    <img src="assets/images/photo_3.jpg" id="image" alt="photo_7">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app8">
+                    <img src="assets/images/photo_9.png" id="image" alt="photo_8">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app9">
+                    <img src="assets/images/photo_10.jpg" id="image" alt="photo_9">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="app10">
+                    <img src="assets/images/photo_11.jpg" id="image" alt="photo_10">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app11">
+                    <img src="assets/images/photo_12.jpg" id="image" alt="photo_11">
+                </div>
+            </div>
+            <div class="col">
+                <div class="app12">
+                    <img src="assets/images/photo_13.jpg" id="image" alt="photo_13">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bgimg-3">
+        <div class="caption">
+            <span class="border" id="links">LINKS</span>
+        </div>
+    </div>
+    <div>
+        <h3 style="margin-left: 13%">
+            GitHub and LinkedIn Profiles for Valerie
+        </h3>
+        <div class="link">
+            <a href="https://github.com/valeriemiller5" target="_blank" class="box box-5">
+                <img src="assets/images/github.png" class="socialMedia" width="75" height="75" style="margin-right: 50px" alt="github">
+            </a>
+            <a href="https://www.linkedin.com/in/valeriesflores/" target="_blank" class="box box-5">
+                <img src="assets/images/linkedin.jpg" class="socialMedia" width="75" height="75" alt="linkedin">
+            </a>
+        </div>
+    </div>
+    <div class="bgimg-4">
+        <div class="caption">
+            <span class="border" id="contact">CONTACT</span>
+        </div>
+    </div>
+    <div class="container" id="contactInfo">
+        <div class="row">
+            <div class="col" id="infoForm">
+                <h3>Please Fill Out the Form:</h3>
+                <form id="contactForm">
+                    <div>
+                        <div>
+                            <label>Name:
+                                <input id="name" type="text" name="name" placeholder="Enter Your Name Here" />
+                            </label>
                         </div>
-                    </div>
-                    <!-- Contact Form - information is saved to a Firebase database -->
-                    <div id="contactInfo">
-                        <form id="contactForm">
-                                <div class="row">
-                                    <div class="column">
-                                        <label>Name:
-                                            <input id="name" type="text" placeholder="Enter Your Name Here" />
-                                        </label>
-                                    </div>
-                                    <div class="column"></div>
-                                    <div class="column"></div>
-                                    <div class="column" id="myContact">
-                                        <h3 id="contactHeader" style="color: white">Contact Information:</h3>
-                                        <p id="email">Email: <a id="emailLink" href="mailto:valerie.flores64@gmail.com?subject=Valerie's Website Contact">valerie.flores64@gmail.com</a></p>
-                                        <p id="phone">Phone: (714) 907-2563</p>
-                                    </div>
-                                </div>            
-                                <div class="row">
-                                    <div class="column">
-                                        <label>Email:
-                                            <input id="email" type="text" placeholder="Enter Your Email Here" />
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <label>Message:
-                                            <textarea id="message" placeholder="Enter Message Here"></textarea>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="small-6 small-centered text-center column">
-                                    <a href="#" class="button success" id="submit">Submit</a>
-                                </div>
-                            </form>
-                    </div>
-                <!-- Portfolio page with links to latest projects I've completed (solo and group projects included) -->
-                <div class="projects-container">
-                    <div class="row"> 
-                            <div class="column">
-                                <a href="https://click-game-01.herokuapp.com/" target="_blank" class="box box-2">
-                                    <img src="assets/images/photo_2.png" class="responsive" width="75" height="50" alt="photo_2">
-                                    <div class="center-top">Clicky-Game</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/Clicky-Game" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/liri-node-app" target="_blank" class="box box-3">
-                                    <img src="assets/images/liri-photo.png" class="responsive" width="75" height="50" alt="photo_3">
-                                    <div class="center-bottom">LIRI Node App</div>
-                                </a>
-                                <a href="https://valeriemiller5.github.io/liri-node-app/" target="_blank">
-                                    <div class="codeLink">Click here to see the README for this project.</div>
-                                </a>
-                            </div>
-                            <div class="column">
-                                    <a href="https://bookfinder-01.herokuapp.com/" target="_blank" class="box box-4">
-                                        <img src="assets/images/photo_4.jpg" class="responsive" width="75" height="50" alt="photo_4">
-                                        <div class="center-top">Google Book Finder</div>
-                                    </a>
-                                    <a href="https://github.com/valeriemiller5/Book-Finder" target="_blank">
-                                        <div class="codeLink">Click here to see the code for this project.</div>
-                                    </a>
-                                    <a href="https://valeriemiller5.github.io/Group-Project-1/" target="_blank" class="box box-5">
-                                        <img src="assets/images/photo_5.jpg" class="responsive" width="75" height="50" alt="photo_5">
-                                        <div class="center-bottom">HYelp</div>
-                                    </a>
-                                    <a href="https://github.com/valeriemiller5/Group-Project-1" target="_blank">
-                                        <div class="codeLink">Click here to see the code for this project.</div>
-                                    </a>
-                            </div>
-                            <div class="column">
-                                <a href="https://friend-finder-02.herokuapp.com/" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_6.jpg" class="responsive" width="75" height="50" alt="photo_6">
-                                    <div class="center-top">Friend Finder</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/Friend-Finder" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                                <a href="https://stouijaboard.herokuapp.com/" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_8.jpg" class="responsive" width="75" height="50" alt="photo_6">
-                                    <div class="center-bottom">Stouija Board</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/stouijaboard" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <a href="https://burger-logger-02.herokuapp.com/" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_7.png" class="responsive" width="75" height="50" alt="photo_6">
-                                    <div class="center-top">Burger-Log</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/burger-logger" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                                <a href="https://thenewsroom.herokuapp.com/" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_3.jpg" class="responsive" width="75" height="50" alt="photo_6">
-                                    <div class="center-bottom">The Newsroom</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/news-scraper" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                            </div>
-                            <div class="column">
-                                <a href="https://github.com/valeriemiller5/Bamazon" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_9.png" class="responsive" width="75" height="50" alt="photo_9">
-                                    <div class="center-top">Bamazon</div>
-                                </a>
-                                <a href="https://valeriemiller5.github.io/Bamazon/" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                                <a href="https://valeriemiller5.github.io/TriviaGame/" target="_blank" class="box box-6">
-                                    <img src="assets/images/photo_10.jpg" class="responsive" width="75" height="50" alt="photo_10">
-                                    <div class="center-bottom">Trivia Game</div>
-                                </a>
-                                <a href="https://github.com/valeriemiller5/TriviaGame" target="_blank">
-                                    <div class="codeLink">Click here to see the code for this project.</div>
-                                </a>
-                            </div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>            
+                    <div class="row">
+                        <div class="column">
+                            <label>Email:
+                                <input id="email" type="text" name="email" placeholder="Enter Your Email Here" />
+                            </label>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <a href="https://valeriemiller5.github.io/TrainSchedule/" target="_blank" class="box box-6">
-                                <img src="assets/images/photo_11.jpg" class="responsive" width="75" height="50" alt="photo_11">
-                                <div class="center-middle">Train Schedule</div>
-                            </a>
-                            <a href="https://github.com/valeriemiller5/TrainSchedule" target="_blank">
-                                <div class="codeLink">Click here to see the code for this project.</div>
-                            </a>
+                            <label>Message:
+                                <textarea id="message" name="message" placeholder="Enter Message Here"></textarea>
+                            </label>
                         </div>
-                        <div class="column">
-                            <a href="https://valeriemiller5.github.io/GifTastic/" target="_blank" class="box box-6">
-                                <img src="assets/images/photo_12.jpg" class="responsive" width="75" height="50" alt="photo_12">
-                                <div class="center-middle">Giftastic</div>
-                            </a>
-                            <a href="https://github.com/valeriemiller5/GifTastic" target="_blank">
-                                <div class="codeLink">Click here to see the code for this project.</div>
-                            </a>
-                        </div>
-                        
                     </div>
+                    <div class="small-6 small-centered text-center column">
+                        <a href="#" class="btn btn-secondary" id="submit">Submit</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <div class="column" id="myContact">
+                    <h3 id="contactHeader">Contact Information:</h3>
+                    <p id="email">Email: <a id="emailLink" href="mailto:valerie.flores64@gmail.com?subject=Valerie's Website Contact">valerie.flores64@gmail.com</a></p>
                 </div>
-
-            <div class="bottom-content-section"></div>  
+            </div>
         </div>
+    </div>
+    <div class="bottomNav">
+        <h6 id="bottomLogo"><span><img src="assets/images/heart-icon.png" alt="myHeart" id="myHeart"></span>This site created by Valerie Flores<span><img src="assets/images/heart-icon.png" alt="myHeart" id="myHeart"></span></h6>
+    </div>
 </body>
 </html>
