@@ -1,0 +1,25 @@
+{
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "description": "online portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriemiller5/Professional-Portfolio.git"
+  },
+  "author": "V Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriemiller5/Professional-Portfolio/issues"
+  },
+  "homepage": "https://github.com/valeriemiller5/Professional-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  }
+}

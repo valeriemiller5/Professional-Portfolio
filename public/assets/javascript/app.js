@@ -94,8 +94,9 @@ $(function() {
           }, function(errorObject) {
             console.log("The read failed: " + errorObject.code);
           });
+
           
           // Resets the contact form to clear each field
-          $("#contactInfo").trigger("reset");
+          $("#contactForm").trigger("reset");
       });
 });

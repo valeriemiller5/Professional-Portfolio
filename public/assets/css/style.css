@@ -170,10 +170,12 @@ div.app:hover a, div.app2:hover a, div.app3:hover a, div.app4:hover a, div.app5:
 .bottomNav {
   overflow: hidden;
   background-color: #333;
-  /* position: fixed; */
+  /* position: absolute; */
   padding: 15px;
   bottom: 0;
+  margin-bottom: 0%;
   width: 100%;
+  z-index: 2;
 }
 
 #bottomLogo {
