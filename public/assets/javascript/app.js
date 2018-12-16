@@ -59,44 +59,7 @@ $(function() {
         $this.append("<a href=https://valeriemiller5.github.io/Unit-4-Game/ target='_blank'><p><h6>Crystal Collector:</h6>Click the crystals to match the total score, but don't go over!</p></a>");
     });
 
-    // Firebase setup to store messages sent via the 'Contact Me' form
-    var config = {
-        apiKey: "AIzaSyBIOX3DPPRLci_6Hx28Vuzvytm67Nha3LQ",
-        authDomain: "professional-portfolio-2864b.firebaseapp.com",
-        databaseURL: "https://professional-portfolio-2864b.firebaseio.com",
-        projectId: "professional-portfolio-2864b",
-        storageBucket: "professional-portfolio-2864b.appspot.com",
-        messagingSenderId: "385053311755"
-      };
-      firebase.initializeApp(config);
-
-    var database = firebase.database();
-    
-    // When contact information is entered into the form, it is submitted to the Firebase database
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        var name = $("#name").val().trim();
-        var email = $("#email").val().trim();
-        var message = $("#message").val().trim();
-        var newContact = {
-          name: name,
-          email: email,
-          message: message
-        };
-        
-        database.ref().push(newContact);
-
-        database.ref().on("child_added", function(snapshot) {
-            console.log(snapshot.val());
-            console.log(snapshot.val().name);
-            console.log(snapshot.val().email);
-            console.log(snapshot.val().message);
-          }, function(errorObject) {
-            console.log("The read failed: " + errorObject.code);
-          });
-
-          
-          // Resets the contact form to clear each field
-          $("#contactForm").trigger("reset");
-      });
+    // Resets the contact form to clear each field
+    $("#contactForm").trigger("reset");
+      
 });
