@@ -9,6 +9,15 @@
     padding: 20px;
   }
 
+  .form-group {
+    width: 250px;
+  }
+
+  #name, #email, #message {
+    border-radius: 25px;
+    width: 250px;
+  }
+
   .link {
     padding: 50px;
     margin-left: 45%;
