@@ -127,6 +127,37 @@
     .sidenav a {font-size: 18px;}
   }
 
+  @media screen and (max-width: 980px) {
+    .sidenav {
+      width: 100px;
+    }
+    .sidenav a {
+      text-decoration: none;
+      font-size: 15px;
+      color: darkslategray;
+      display: block;
+    }
+    .initials {
+      height: 50px;
+      width: 55px;
+    }
+    .caption span.border {
+      font-size: 15px;
+      letter-spacing: 10px;
+    }
+    h3 {
+      font-size: 15px;
+      margin-left: 25%;
+    }
+    p {
+      font-size: 15px;
+      margin-left: 35%;
+    }
+    .myPhoto {
+      margin-bottom: 15px;
+    }
+  }
+
 div.app, div.app2, div.app3, div.app4, div.app5, div.app6, div.app7, div.app8, div.app9, div.app10, div.app11, div.app12 {
   position:relative;
 }
