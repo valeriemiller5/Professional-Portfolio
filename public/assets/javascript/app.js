@@ -61,5 +61,4 @@ $(function() {
 
     // Resets the contact form to clear each field
     $("#contactForm").trigger("reset");
-      
 });

@@ -15,7 +15,7 @@ app.use(express.static("public"));
 // ***********MONGOOSE SETUP FOR HEROKU DEPLOYMENT***********
 // mongoose.connect("mongodb://localhost/newsdatabase", { useNewUrlParser: true });
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsdatabase";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/messagedatabase";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
@@ -36,7 +36,7 @@ db.once("open", function() {
 app.get("/", function(err) {
   if (err) throw err;
 });
-// require("./routes/htmlroutes")(app);
+require("./routes/htmlroutes")(app);
 
 // Start the server
 app.listen(PORT, function() {
