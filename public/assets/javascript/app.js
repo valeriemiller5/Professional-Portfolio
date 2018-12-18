@@ -1,4 +1,5 @@
 $(function() {
+
     $("div.app").each(function() {
         let $this = $(this);
         $this.append("<a href=https://click-game-01.herokuapp.com/ target='_blank'><p><h6>Memory Game:</h6>Click an image once until all images are clicked. Clicking the same image twice will be Game Over.</p></a>");
@@ -60,5 +61,11 @@ $(function() {
     });
 
     // Resets the contact form to clear each field
-    $("#contactForm").trigger("reset");
+    // $("#formBtn").on("click", function() {
+    //     var resetForm = $("#contactForm").each(function() {
+    //         this.reset();
+    //     });
+
+    //     setTimeout(resetForm, 2000);
+    // });
 });

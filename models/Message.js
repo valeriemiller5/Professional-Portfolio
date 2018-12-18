@@ -1,18 +1,19 @@
 // require in mongoose Node package
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // Create the schema for the MongoDB database
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // Create the schema model for the database
-var MessageSchema = new Schema({
+const MessageSchema = new Schema({
     name: {
         type: String,
         required: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     },
     message: {
         type: String,
@@ -21,7 +22,7 @@ var MessageSchema = new Schema({
 });
 
 // creates a Comments model with Mongoose using the CommentSchema
-var Message = mongoose.model("Message", MessageSchema);
+const Message = mongoose.model("Message", MessageSchema);
 
 // export the model
 module.exports = Message;
