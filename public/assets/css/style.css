@@ -18,6 +18,14 @@
     width: 250px;
   }
 
+  #app {
+    margin-left: 28%;
+  }
+
+  #profiles {
+    margin-left: 13%;
+  }
+
   .link {
     padding: 50px;
     margin-left: 45%;
@@ -150,20 +158,50 @@
       height: 50px;
       width: 55px;
     }
+    .caption {
+      margin-left: 10%;
+    }
     .caption span.border {
       font-size: 15px;
       letter-spacing: 10px;
     }
     h3 {
-      font-size: 15px;
+      font-size: 12px;
       margin-left: 25%;
     }
     p {
-      font-size: 15px;
+      font-size: 11.5px;
       margin-left: 35%;
+    }
+    #app {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    #profiles {
+      margin-left: 35%;
+      margin-right: 10%;
+    }
+    #myApps {
+      margin-left: 12%;
+    }
+    #image {
+      width: 237px;
+    }
+    #myContact {
+      margin-left: -18%;
+    }
+    #contactForm {
+      margin-left: 5%;
+    }
+    #bottomLogo {
+      font-size: 10px;
     }
     .myPhoto {
       margin-bottom: 15px;
+      margin-left: 5%;
+    }
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      height: 180px;
     }
   }
 

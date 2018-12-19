@@ -45,7 +45,7 @@ app.post("/", function (req, res) {
   Message.create(message)
   .then(function(dbMessage) {
     // return console.log(dbMessage);
-    res.redirect("/index.html")
+    res.redirect("/")
     res.end();
   })
   .catch(function(err) {
