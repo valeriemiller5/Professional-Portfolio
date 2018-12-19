@@ -1,5 +1,4 @@
-$(function() {
-
+$(document).ready(function() {
     $("div.app").each(function() {
         let $this = $(this);
         $this.append("<a href=https://click-game-01.herokuapp.com/ target='_blank'><p><h6>Memory Game:</h6>Click an image once until all images are clicked. Clicking the same image twice will be Game Over.</p></a>");
@@ -59,13 +58,4 @@ $(function() {
         let $this = $(this);
         $this.append("<a href=https://valeriemiller5.github.io/Unit-4-Game/ target='_blank'><p><h6>Crystal Collector:</h6>Click the crystals to match the total score, but don't go over!</p></a>");
     });
-
-    // Resets the contact form to clear each field
-    // $("#formBtn").on("click", function() {
-    //     var resetForm = $("#contactForm").each(function() {
-    //         this.reset();
-    //     });
-
-    //     setTimeout(resetForm, 2000);
-    // });
 });

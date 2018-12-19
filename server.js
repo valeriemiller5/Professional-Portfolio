@@ -2,6 +2,7 @@ var express = require("express");
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
+var path = require("path");
 
 var PORT = process.env.PORT || 8000;
 
@@ -43,10 +44,12 @@ app.post("/", function (req, res) {
 
   Message.create(message)
   .then(function(dbMessage) {
-      console.log(dbMessage);
+    // return console.log(dbMessage);
+    res.redirect("/index.html")
+    res.end();
   })
   .catch(function(err) {
-      console.log(err);
+      return console.log(err);
   });
 });
 
