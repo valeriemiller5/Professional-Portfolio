@@ -198,7 +198,8 @@
     }
     .myPhoto {
       margin-bottom: 15px;
-      margin-left: 5%;
+      margin-left: 42%;
+      float: none;
     }
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
       height: 180px;
