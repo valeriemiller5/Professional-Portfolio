@@ -45,13 +45,15 @@ app.post("/", function (req, res) {
   Message.create(message)
   .then(function(dbMessage) {
     // return console.log(dbMessage);
-    res.redirect("/")
+    res.redirect("/");
     res.end();
   })
   .catch(function(err) {
       return console.log(err);
   });
 });
+
+
 
 // Start the server
 app.listen(PORT, function() {

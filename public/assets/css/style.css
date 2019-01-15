@@ -138,6 +138,41 @@
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
+
+  #contactInfo {
+    padding: 15px 50px 35px 50px;
+  }
+  
+  #name, #email {
+    width: 400px;
+  }
+  
+  #message {
+    width: 375px;
+    height: 175px;
+  }
+
+  .bottomNav {
+    overflow: hidden;
+    background-color: #333;
+    /* position: absolute; */
+    padding: 15px;
+    bottom: 0;
+    margin-bottom: 0%;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  #bottomLogo {
+    margin-left: 75%;
+    color: white;
+  }
+  
+  #myHeart {
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+  }
   
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -195,6 +230,18 @@
     }
     #bottomLogo {
       font-size: 10px;
+      margin-left: 35%;
+    }
+    #myHeart {
+      height: 20px;
+      width: 20px;
+    }
+    #name, #email {
+      width: 250px;
+    }
+    #message {
+      width: 250px;
+      height: 100px;
     }
     .myPhoto {
       margin-bottom: 15px;
@@ -231,39 +278,4 @@ div.app:hover a, div.app2:hover a, div.app3:hover a, div.app4:hover a, div.app5:
   top: 80%;
   left: 38%;
   transform: translate(-50%, -90%);
-}
-
-#contactInfo {
-  padding: 15px 50px 35px 50px;
-}
-
-#name, #email {
-  width: 400px;
-}
-
-#message {
-  width: 375px;
-  height: 175px;
-}
-
-.bottomNav {
-  overflow: hidden;
-  background-color: #333;
-  /* position: absolute; */
-  padding: 15px;
-  bottom: 0;
-  margin-bottom: 0%;
-  width: 100%;
-  z-index: 2;
-}
-
-#bottomLogo {
-  margin-left: 75%;
-  color: white;
-}
-
-#myHeart {
-  height: 35px;
-  width: 35px;
-  padding: 5px;
 }
